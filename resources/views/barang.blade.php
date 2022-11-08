@@ -17,28 +17,37 @@
 </head>
 
 <body>
-    
-    <h2>Data Barang</h2>
-    <table class="table table-hover" border="1" cellpadding='10'>
-        <thead>
-            <tr>
-                <th>No</th>
-                <th>Nama Barang</th>
-                <th>Harga</th>
-                <th>Stok</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                @foreach ($datas as $item)
-                    <th>{{ $no++ }}</th>
-                    <th>{{ $item->namaBar }}</th>
-                    <th>{{ $item->harga }}</th>
-                    <th>{{ $item->stok }}</th>
-            </tr>
-            @endforeach
-        </tbody>
-    </table>
+    <div class="container">
+        <h2>Data Barang</h2>
+
+        @if (session('status'))
+            <div class="alert alert-{{ session('status') }}" role="alert">
+                <strong>Selamat!</strong> Data berhasil di tambahkan
+            </div>
+        @endif
+
+        <a href="{{ route('add') }}" class="btn btn-primary">(+) Tambah</a>
+        <table class="table table-hover" border="1" cellpadding='10'>
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>Nama Barang</th>
+                    <th>Harga</th>
+                    <th>Stok</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    @foreach ($datas as $item)
+                        <th>{{ $no++ }}</th>
+                        <th>{{ $item->namaBar }}</th>
+                        <th>{{ $item->harga }}</th>
+                        <th>{{ $item->stok }}</th>
+                </tr>
+                @endforeach
+            </tbody>
+        </table>
+    </div>
 </body>
 
 </html>

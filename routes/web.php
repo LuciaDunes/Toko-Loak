@@ -17,5 +17,6 @@ use App\Http\Controllers\BarangController;
 // Route::get('/', function () {
 //     return view('welcome');
 // });
-Route::get('/tampilbarang', [BarangController::class, 'tampilBarang'])->name('barang');
-Route::post('/buatbarang', [BarangController::class, 'buaBarang'])->name('buatBarang');
+Route::get('/', [BarangController::class, 'home'])->name('home');
+Route::get('/tambah', [BarangController::class, 'add'])->name('add');
+Route::post('/simpan', [BarangController::class, 'store'])->name('store');
