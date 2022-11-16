@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Schema\ForeignIdColumnDefinition;
 use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
@@ -14,11 +15,11 @@ return new class extends Migration
     public function up()
     {
         //
-        Schema::create('pembelians', function (Blueprint $table) {
+        Schema::create('pembelian', function (Blueprint $table) {
             $table->id();
-            $table->integer('idPembeli');
-            $table->integer('idBarang');
-            $table->date('tanggal');
+            $table->foreignId('idPembeli')->constrained('pembeli');
+            $table->foreignId('idBarang')->constrained('barang');
+            $table->date('tanggal'); 
         });
     }
 
