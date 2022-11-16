@@ -32,17 +32,23 @@
                 <tr>
                     <th>No</th>
                     <th>Nama Barang</th>
+                    <th>foto</th>
+                    <th>Kategori</th>
                     <th>Harga</th>
                     <th>Stok</th>
+                    <th>Terjual</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
                     @foreach ($datas as $item)
                         <th>{{ $no++ }}</th>
-                        <th>{{ $item->namaBar }}</th>
-                        <th>{{ $item->harga }}</th>
-                        <th>{{ $item->stok }}</th>
+                        <th>{{ $item->name }}</th>
+                        <th><a href="{{ $item->image }}">{{ $item->image }}</a></th>
+                        <th>{{ $item->category }}</th>
+                        <th>{{ $item->price }}</th>
+                        <th>{{ $item->stock }}</th>
+                        <th>{{ $item->sold }}</th>
                 </tr>
                 @endforeach
             </tbody>

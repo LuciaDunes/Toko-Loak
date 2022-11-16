@@ -5,16 +5,16 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Pembelian extends Model
+class Transactions extends Model
 {
     use HasFactory;
-    protected $table = 'pembelian';
+    protected $table = 'transactions';
     protected $fillable = [
-        'idPembeli',
-        'idBarang',
-        'tanggal',
+        'user_id',
+        'item_id',
+        'date',
     ];
-    protected $guarded = [
+    protected $primaryKey = [
         'id',
     ];
 }
