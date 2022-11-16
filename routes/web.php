@@ -20,3 +20,4 @@ use App\Http\Controllers\BarangController;
 Route::get('/', [BarangController::class, 'home'])->name('home');
 Route::get('/tambah', [BarangController::class, 'add'])->name('add');
 Route::post('/simpan', [BarangController::class, 'store'])->name('store');
+Route::get('/edit', [BarangController::class, 'edit'])->name('edit');
