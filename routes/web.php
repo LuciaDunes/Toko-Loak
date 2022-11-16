@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
-use App\Http\Controllers\BarangController;
+use App\Http\Controllers\ItemController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,7 +17,7 @@ use App\Http\Controllers\BarangController;
 // Route::get('/', function () {
 //     return view('welcome');
 // });
-Route::get('/', [BarangController::class, 'home'])->name('home');
-Route::get('/tambah', [BarangController::class, 'add'])->name('add');
-Route::post('/simpan', [BarangController::class, 'store'])->name('store');
-Route::get('/edit', [BarangController::class, 'edit'])->name('edit');
+Route::get('/', [ItemController::class, 'home'])->name('home');
+Route::get('/tambah', [ItemController::class, 'add'])->name('add');
+Route::post('/simpan', [ItemController::class, 'store'])->name('store');
+Route::get('/edit', [ItemController::class, 'edit'])->name('edit');

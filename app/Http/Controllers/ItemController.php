@@ -2,13 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Barang;
+use App\Models\Item;
 use Illuminate\Http\Request;
 
-class BarangController extends Controller
+class ItemController extends Controller
 {
     public function home(){
-        $data = Barang::all();
+        $data = Item::all();
         $no = 1;
 
         return view('barang', ['datas' => $data, 'no' => $no]);
@@ -25,7 +25,7 @@ class BarangController extends Controller
             'stok' => $request->stok
         ];
 
-        Barang::create($data);
+        Item::create($data);
 
         return redirect()->route('home')->with('status', 'success');
     }

@@ -5,14 +5,18 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Pembeli extends Model
+
+class Item extends Model
 {
     use HasFactory;
-    protected $table = 'pembeli';
+    protected $table = 'items';
     protected $fillable = [
-        'namaPem',
-        'alamat',
-        'email',
+        'name',
+        'category',
+        'image',
+        'price',
+        'stock',
+        'sold',
     ];
     protected $guarded = [
         'id',
