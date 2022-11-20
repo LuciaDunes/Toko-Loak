@@ -17,7 +17,15 @@ use App\Http\Controllers\ItemController;
 // Route::get('/', function () {
 //     return view('welcome');
 // });
-Route::get('/', [ItemController::class, 'home'])->name('home');
+Route::get('/catalog', [ItemController::class, 'catalog'])->name('catalog');
+Route::get('/single', [ItemController::class, 'single'])->name('single');
+Route::get('/barang', [ItemController::class, 'showItems'])->name('showItems');
 Route::get('/tambah', [ItemController::class, 'add'])->name('add');
 Route::post('/simpan', [ItemController::class, 'store'])->name('store');
 Route::get('/edit', [ItemController::class, 'edit'])->name('edit');
+
+
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
