@@ -1,5 +1,7 @@
+
 <!DOCTYPE html>
 <html lang="en">
+
 
 <head>
     <meta charset="UTF-8">
@@ -15,36 +17,11 @@
         {{-- @vite(['resources/sass/app.scss', 'resources/js/app.js','resources/js/catalog.js','resources/js/bootatrap.js']) --}}
 </head>
 
-<body>
+
 
     <body>
         {{-- header --}}
-        <div class="container">
-            <div class="row justify-content-center pt-4 pb-2">
-                <img src="{{asset("storage/LOA.png")}}" height="100px" alt="icon">
-            </div>
-            <div class="row justify-content-center pb-2">
-                <ul class="nav">
-                    <li class="nav-item">
-                        <a class="nav-link text-dark" href="index.php">Home</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle text-dark" id="navbarDropdown" role="button"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Daftar Harga
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item text-dark" href="catalog.php?merk=sony">sony</a>
-                            <a class="dropdown-item text-dark" href="catalog.php?merk=fuji">fuji</a>
-                            <a class="dropdown-item text-dark" href="catalog.php?merk=nikon">nikon</a>
-                            <a class="dropdown-item text-dark" href="catalog.php?merk=canon">canon</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item text-dark" href="catalog.php?kategori=aksessoris">aksessoris</a>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
+        @include('layouts.header')
         <!-- Modal -->
         <div class="modal fade bg-white" id="search" tabindex="-1" role="dialog"
             aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -116,7 +93,7 @@
             integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
         </script>
         <!-- <script src="assets/js/custom.js"></script> -->
-
+@include('layouts.footer')
     </body>
 
 </html>

@@ -7,6 +7,13 @@ use Illuminate\Http\Request;
 
 class ItemController extends Controller
 {
+
+    public function home(){
+        $data = Item::all();
+        $no = 1;
+
+        return view('landingPage', ['datas' => $data, 'no' => $no]);
+    }
     public function showItems(){
         $data = Item::all();
         $no = 1;
