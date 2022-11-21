@@ -78,7 +78,7 @@
                 <div class="row pt-2">
                     <div class="col-12">
                         <p class="text-left text-light">
-                            Copyright &copy; 2021 RentCam
+                            Copyright &copy; 2022 LoakStore
                         </p>
                     </div>
                 </div>

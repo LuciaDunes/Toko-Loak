@@ -21,11 +21,10 @@
 
      <section class="bg-light">
          <div class="container pb-5">
-             @foreach ($datas as $item)
                  <div class="row">
                      <div class="col-lg-5 mt-5">
                          <div class="card mb-3">
-                             <img class="card-img img-fluid" src="{{ $item->image }}" alt="Card image cap"
+                             <img class="card-img img-fluid" src="{{ $datas->image }}" alt="Card image cap"
                                  id="product-detail">
                          </div>
                      </div>
@@ -33,14 +32,14 @@
                      <div class="col-lg-7 mt-5">
                          <div class="card">
                              <div class="card-body">
-                                 <h1 class="h2">{{ $item->name }}</h1>
-                                 <p class="h3 py-2">Rp {{ $item->price }}</p>
+                                 <h1 class="h2">{{ $datas->name }}</h1>
+                                 <p class="h3 py-2">Rp {{ $datas->price }}</p>
                                  <ul class="list-inline">
                                      <li class="list-inline-item">
-                                         <h6>kompatibel untuk</h6>
+                                         <h6>terjual {{$datas->sold}} pcs</h6>
                                      </li>
                                      <li class="list-inline-item">
-                                         <p class="text-muted"><strong>{{ $item->category }}</strong></p>
+                                         <p class="text-muted"><strong>{{ $datas->category }}</strong></p>
                                      </li>
                                  </ul>
 
@@ -55,14 +54,12 @@
                                          <div class="col-auto">
                                              <ul class="list-inline pb-3">
                                                  <li class="list date m-1 pb-1">
-                                                     Tanggal Pengambilan :
-                                                     <input class="form-control" type="date" name="tanggal_peminjaman">
+                                                     Total barang
+                                                     <input class="form-control" type="number" name="total">
                                                  </li>
-                                                 <li class="list date m-1 pt-1">
-                                                     Tanggal Pengembalian :
-                                                     <input class="form-control" type="date" name="tanggal_pengembalian">
-                                                 </li>
-
+                                                 <li class="list date m-1 pb-1">
+                                                    Stok barang {{$datas->stock}}
+                                                </li>
                                              </ul>
                                          </div>
                                      </div>
@@ -77,7 +74,6 @@
                              </div>
                          </div>
                      </div>
-             @endforeach
          </div>
          </div>
      </section>

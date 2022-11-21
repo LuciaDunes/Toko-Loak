@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\ItemController;
 use App\Http\Controllers\TransactionController;
+use App\Http\Controllers\HomeController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -20,7 +21,7 @@ use App\Http\Controllers\TransactionController;
 // });
 Route::get('/', [ItemController::class, 'landingPage'])->name('landingPage');
 Route::get('/catalog', [ItemController::class, 'catalog'])->name('catalog');
-Route::get('/single/{data}', [ItemController::class, 'single'])->name('single');
+
 Route::get('/barang', [ItemController::class, 'showItems'])->name('showItems');
 Route::get('/tambah', [ItemController::class, 'add'])->name('add');
 Route::post('/simpan', [ItemController::class, 'store'])->name('store');
@@ -32,4 +33,5 @@ Route::get('/Transaction', [TransactionController::class, 'showTransaction'])->n
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [HomeController::class, 'index'])->name('home');
+Route::get('/single/{data}', [HomeController::class, 'single'])->name('single');

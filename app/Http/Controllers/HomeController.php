@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\Item;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -24,5 +24,12 @@ class HomeController extends Controller
     public function index()
     {
         return view('home.landingPage');
+    }
+     
+    public function single($data){
+        $datas = Item::find($data);
+        $no = 1;
+       
+        return view('home.single-catalog', compact('datas'));
     }
 }

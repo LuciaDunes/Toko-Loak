@@ -26,13 +26,7 @@ class ItemController extends Controller
 
         return view('home.catalog', ['datas' => $data, 'no' => $no]);
     }
-  
-    public function single(Request $data){
-        $data = Item::find($data);
-        $no = 1;
-
-        return view('home.single-catalog', ['datas' => $data, 'no' => $no]);
-    }
+ 
 
     public function add() {
         return view('admin.tambah');
