@@ -17,7 +17,7 @@
 </head>
 
 <body bg-colour="fff">
- 
+  @include('layouts.header')
   <header>
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
       <ol class="carousel-indicators">
@@ -27,13 +27,13 @@
       </ol>
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img class="d-block w-100" src="assets/img/dash1.jpg" alt="First slide">
+          <img class="d-block w-100" src="{{asset("storage/IMG_2499.JPG")}}"  alt="First slide">
         </div>
         <div class="carousel-item">
-          <img class="d-block w-100" src="assets/img/dash2.jpg" alt="Second slide">
+          <img class="d-block w-100" src="{{asset("storage/IMG_2555.JPG")}}"  alt="Second slide">
         </div>
         <div class="carousel-item">
-          <img class="d-block w-100" src="assets/img/dash3.jpg" alt="Third slide">
+          <img class="d-block w-100" src="{{asset("storage/IMG_2560.JPG")}}"  alt="Third slide">
         </div>
       </div>
       <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -64,15 +64,15 @@
     </div>
     <div class="row">
       <div class="col-12 col-md-4 p-5 mt-3">
-        <a href="Catalog.php?kategori=kamera"><img src="./assets/img/Fujifilm.jpg" class="rounded-circle img-fluid border"></a>
+        <a href="Catalog.php?kategori=kamera"><img src="{{asset("storage/LOA.png")}}" class="rounded-circle img-fluid border"></a>
         <h2 class="text-center mt-3 mb-3">Camera</h2>
       </div>
       <div class="col-12 col-md-4 p-5 mt-3">
-        <a href="Catalog.php?kategori=lensa"><img src="./assets/img/Lens.jpg" class="rounded-circle img-fluid border"></a>
+        <a href="Catalog.php?kategori=lensa"><img src="{{asset("storage/LOA.png")}}" class="rounded-circle img-fluid border"></a>
         <h2 class="text-center mt-3 mb-3">Lens</h2>
       </div>
       <div class="col-12 col-md-4 p-5 mt-3">
-        <a href="Catalog.php?kategori=aksessoris"><img src="./assets/img/accessories1.jpg" class="rounded-circle img-fluid border"></a>
+        <a href="Catalog.php?kategori=aksessoris"><img src="{{asset("storage/LOA.png")}}" class="rounded-circle img-fluid border"></a>
         <h2 class="text-center mt-3 mb-3">Accessories</h2>
       </div>
     </div>
@@ -80,5 +80,5 @@
 
 
 </body>
-
+@include('layouts.footer')
 </html>

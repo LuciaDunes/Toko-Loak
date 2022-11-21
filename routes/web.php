@@ -17,7 +17,7 @@ use App\Http\Controllers\ItemController;
 // Route::get('/', function () {
 //     return view('welcome');
 // });
-Route::get('/', [ItemController::class, 'home'])->name('home');
+Route::get('/', [ItemController::class, 'landingPage'])->name('landingPage');
 Route::get('/catalog', [ItemController::class, 'catalog'])->name('catalog');
 Route::get('/single', [ItemController::class, 'single'])->name('single');
 Route::get('/barang', [ItemController::class, 'showItems'])->name('showItems');

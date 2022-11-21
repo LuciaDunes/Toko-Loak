@@ -5,10 +5,10 @@
     <div class="row justify-content-center pb-2">
         <ul class="nav">
             <li class="nav-item">
-                <a class="nav-link text-dark mx-1" href="index.php">Home</a>
+                <a class="nav-link text-dark mx-1" href="{{ url('/') }}">Home</a>
             </li>
             <li>
-                <a class="nav-link text-dark mx-1" href="">Catalog</a>
+                <a class="nav-link text-dark mx-1" href="{{ url('catalog') }}">Catalog</a>
             </li>
             <li>
                 <button type="button" class="btn btn-primary mx-1">Login</button>
