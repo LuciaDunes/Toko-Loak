@@ -40,6 +40,7 @@
                                     <th>Harga</th>
                                     <th>Stok</th>
                                     <th>Terjual</th>
+                                    <th>Tindakan</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -52,6 +53,8 @@
                                         <th>{{ $item->price }}</th>
                                         <th>{{ $item->stock }}</th>
                                         <th>{{ $item->sold }}</th>
+                                        <th><a href="{{ route('add') }}" class="btn btn-warning ">Edit</a>
+                                            <a href="{{ route('add') }}" class="btn btn-danger ">Delete</a></th>
                                 </tr>
                                 @endforeach
                             </tbody>
