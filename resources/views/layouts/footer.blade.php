@@ -3,7 +3,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-4 pt-5">
-                    <img src="{{asset("storage/LOA.png")}}" height="60px" alt="icon">
+                    
                     <ul class="list-unstyled text-light footer-link-list">
                         <li>
                             <i class="fas fa-map-marker-alt fa-fw"></i>
