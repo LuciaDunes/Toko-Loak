@@ -12,6 +12,6 @@ class TransactionController extends Controller
         $data = Transaction::all();
         $no = 1;
 
-        return view('transaction', ['datas' => $data, 'no' => $no]);
+        return view('admin.transaction', ['datas' => $data, 'no' => $no]);
     }
 }

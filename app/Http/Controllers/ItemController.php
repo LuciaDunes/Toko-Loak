@@ -12,29 +12,30 @@ class ItemController extends Controller
         $data = Item::all();
         $no = 1;
 
-        return view('landingPage', ['datas' => $data, 'no' => $no]);
+        return view('home.landingPage', ['datas' => $data, 'no' => $no]);
     }
     public function showItems(){
         $data = Item::all();
         $no = 1;
 
-        return view('barang', ['datas' => $data, 'no' => $no]);
+        return view('admin.barang', ['datas' => $data, 'no' => $no]);
     }
     public function catalog(){
         $data = Item::all();
         $no = 1;
 
-        return view('catalog', ['datas' => $data, 'no' => $no]);
+        return view('home.catalog', ['datas' => $data, 'no' => $no]);
     }
-    public function single(){
-        $data = Item::all();
+  
+    public function single(Request $data){
+        $data = Item::find($data);
         $no = 1;
 
-        return view('single-catalog', ['datas' => $data, 'no' => $no]);
+        return view('home.single-catalog', ['datas' => $data, 'no' => $no]);
     }
 
     public function add() {
-        return view('tambah');
+        return view('admin.tambah');
     }
 
     public function store(Request $request) {
@@ -75,5 +76,19 @@ class ItemController extends Controller
 		return redirect()->back();
 	}
 
-  
+    public function edit($id){
+        $data=Item::find($id);
+        return view ('terminal/edit_terminal',compact('data'),["title"=>"Edit Data Barang"]);
+    }
+    public function proses_edit(Request $request,$id){
+        $data = Item::find($id);
+        $data->update($request->all());
+        return redirect()->route('home')->with('status', 'success');
+    }
+    public function delete($id){
+        $data = Item::find($id);
+        $data->delete();
+        return redirect()->route('terminal');
+    }
+
 }
