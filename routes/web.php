@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\ItemController;
+use App\Http\Controllers\TransactionController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -25,6 +26,8 @@ Route::get('/tambah', [ItemController::class, 'add'])->name('add');
 Route::post('/simpan', [ItemController::class, 'store'])->name('store');
 Route::get('/edit', [ItemController::class, 'edit'])->name('edit');
 
+
+Route::get('/Transaction', [TransactionController::class, 'showTransaction'])->name('showTransaction');
 
 
 Auth::routes();

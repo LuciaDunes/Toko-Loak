@@ -17,54 +17,8 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0">
-        <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">TokoLoak</a>
-        <input class="form-control form-control-dark  m-2" type="text" placeholder="Search" aria-label="Search">
-        <ul class="navbar-nav col-sm-3 col-md-2 mx-5">
-        </ul>
-
-    </nav>
-    <div class="container-fluid">
-        <div class="row">
-            <nav class="col-md-2 d-none d-md-block bg-light sidebar">
-                <div class="sidebar-sticky">
-                    <ul class="nav flex-column">
-                        <li class="nav-item">
-                            <a class="nav-link " href="#">
-                                <span data-feather="home"></span>
-                                Dashboard <span class="sr-only">(current)</span>
-                            </a>
-                        </li>
-                        <li class="nav-item active">
-                            <a class="nav-link" href="#">
-                                <span data-feather="file"></span>
-                                Orders
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                <span data-feather="shopping-cart"></span>
-                                Products
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                <span data-feather="users"></span>
-                                Customers
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#
-                            
-                            ">
-                                <span data-feather="bar-chart-2"></span>
-                                Reports
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-            <main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
+    @include('layouts.headerAdmin')
+            <main role="main" class=" pt-3 px-4">
                 <div class="container-fluid">
                     <div class="row p-5">
                         <h2>Data Barang</h2>
@@ -75,8 +29,8 @@
                             </div>
                         @endif
 
-                        <a href="{{ route('add') }}" class="btn btn-primary">(+) Tambah</a>
-                        <table class="table table-hover" border="1" cellpadding='10'>
+                        <a href="{{ route('add') }}" class="btn btn-primary mx-5">(+) Tambah</a>
+                        <table class="table table-hover mt-3" border="1" cellpadding='10'>
                             <thead>
                                 <tr>
                                     <th>No</th>
