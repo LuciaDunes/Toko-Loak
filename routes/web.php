@@ -28,6 +28,7 @@ Route::post('/simpan', [ItemController::class, 'store'])->name('store');
 Route::get('/edit/{data}', [ItemController::class, 'edit'])->name('edit');
 Route::post('/update', [ItemController::class, 'update'])->name('update');
 Route::get('/Transaction', [TransactionController::class, 'showTransaction'])->name('showTransaction');
+Route::post('/delete/{data}',[ItemController::class, 'delete'])->name('delete');
 
 
 Auth::routes();

@@ -46,7 +46,13 @@ class ItemController extends Controller
 
         return redirect()->route('home')->with('status', 'success');
     }
- 
+    
+    public function delete($data) {
+        $finalproject   = Item::findOrFail($data);
+        $finalproject->delete();
+
+        return redirect()->route('admin.barang')->with('success', 'Data Berhasil Dihapus');
+    }
  
 	public function proses_upload(Request $request){
 		$this->validate($request, [
@@ -79,11 +85,6 @@ class ItemController extends Controller
         $data = Item::find($id);
         $data->update($request->all());
         return redirect()->route('barang')->with('status', 'success');
-    }
-    public function delete($id){
-        $data = Item::find($id);
-        $data->delete();
-        return redirect()->route('terminal');
     }
 
 }

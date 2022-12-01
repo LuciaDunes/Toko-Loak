@@ -54,7 +54,8 @@
                                         <th>{{ $item->stock }}</th>
                                         <th>{{ $item->sold }}</th>
                                         <th ><a href="{{ route('edit', ['data' => $item]) }}" class="btn btn-warning ">Edit</a>
-                                            <a href="{{ route('add') }}" class="btn btn-danger ">Delete</a></th>
+                                            <form action="{{ route('delete', ['data' => $item])}}" method="post"><input class="btn btn-danger" type="submit" value="delete"></form>
+                                           </th>
                                 </tr>
                                 @endforeach
                             </tbody>
