@@ -36,26 +36,37 @@
             <div class="form-group row">
                 <label for="namaBarang" class="col-sm-2 col-form-label col-form-label-lg">Nama Barang</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control form-control-lg" id="namaBarang" name="name" placeholder="Nama Barang">
+                    <input type="text"  class="form-control form-control-lg" id="namaBarang" name="name" placeholder="Nama Barang">
                 </div>
             </div>
             <div class="form-group row">
-                <label for="harga" class="col-sm-2 col-form-label col-form-label-lg">Image</label>
+                <label for="category" class="col-sm-2 col-form-label col-form-label-lg">kategori</label>
                 <div class="col-sm-10">
-                    <input type="file" class="form-control form-control-lg" id="harga" name="image" placeholder="Stok">
+                    <input type="text"  class="form-control form-control-lg" id="category" name="category" placeholder="category">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="image" class="col-sm-2 col-form-label col-form-label-lg">Image</label>
+                <div class="col-sm-10">
+                    <input type="text"  class="form-control form-control-lg" id="image" name="image" placeholder="image">
                     
                 </div>
             </div>
             <div class="form-group row">
                 <label for="harga" class="col-sm-2 col-form-label col-form-label-lg">Harga</label>
                 <div class="col-sm-10">
-                    <input type="number" class="form-control form-control-lg" id="harga" name="price" placeholder="Stok">
+                    <input type="number"  class="form-control form-control-lg" id="harga" name="price" placeholder="price">
                 </div>
             </div>
             <div class="form-group row">
                 <label for="stok" class="col-sm-2 col-form-label col-form-label-lg">Stok</label>
                 <div class="col-sm-10">
-                    <input type="number" class="form-control form-control-lg" id="stok" name="stock" placeholder="Stok">
+                    <input type="number"  class="form-control form-control-lg" id="stok" name="stock" placeholder="Stok">
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-sm-10">
+                    <input type="hidden"  value="0" class="form-control form-control-lg" id="sold" name="sold" placeholder="Sold">
                 </div>
             </div>
                 
