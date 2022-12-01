@@ -28,10 +28,10 @@
     
     <div class="container">
         <a href="{{ route('home') }}" class="text-decoration-none">
-            <h2>Tambah Barang</h2>
+            <h2>Edit Barang</h2>
         </a>
 
-        <form action="{{ route('store') }}" method="post">
+        <form action="{{ route('update') }}" method="post">
             @csrf
             <div class="form-group row">
                 <label for="namaBarang" class="col-sm-2 col-form-label col-form-label-lg">Nama Barang</label>

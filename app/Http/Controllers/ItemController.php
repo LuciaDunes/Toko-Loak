@@ -75,10 +75,10 @@ class ItemController extends Controller
         $data=Item::find($id);
         return view ('admin.edit',compact('data'));
     }
-    public function proses_edit(Request $request,$id){
+    public function update(Request $request,$id){
         $data = Item::find($id);
         $data->update($request->all());
-        return redirect()->route('home')->with('status', 'success');
+        return redirect()->route('barang')->with('status', 'success');
     }
     public function delete($id){
         $data = Item::find($id);

@@ -50,7 +50,7 @@
                                         <th>{{ $item->name }}</th>
                                         <th><a href="{{ $item->image }}">{{ $item->image }}</a></th>
                                         <th>{{ $item->category }}</th>
-                                        <th>{{ $item->price }}</th>
+                                        <th>Rp {{ number_format($item->price) }}</th>
                                         <th>{{ $item->stock }}</th>
                                         <th>{{ $item->sold }}</th>
                                         <th ><a href="{{ route('edit', ['data' => $item]) }}" class="btn btn-warning ">Edit</a>
