@@ -48,8 +48,7 @@
                                      ut labore et dolore magna aliqua. Quis ipsum suspendisse. Donec condimentum elementum
                                      convallis. Nunc sed orci a diam ultrices aliquet interdum quis nulla.</p>
                                  <form action="" method="POST">
-                                     <input type="hidden" name="id_user" value="">
-                                     <input type="hidden" name="id_barang" value="">
+                                     <input type="hidden" name="id_barang" value="{{$datas->id}}">
                                      <div class="row">
                                          <div class="col-auto">
                                              <ul class="list-inline pb-3">
@@ -66,7 +65,7 @@
                                      <div class="row pb-3">
                                          <div class="col ">
                                              <button type="submit" class="btn btn-success btn-lg" name="rent"
-                                                 value="rent">Sewa sekarang </button>
+                                                 value="rent">Beli  </button>
                                          </div>
                                      </div>
                                  </form>

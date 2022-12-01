@@ -14,7 +14,12 @@ class Transaction extends Model
         'item_id',
         'date',
     ];
-    protected $primaryKey = [
-        'id',
-    ];
+    protected $primaryKey = 'id';
+    
+    public function user(){
+        return $this->belongsTo(User::class);
+    }
+
+    public function item(){
+    return $this->belongsTo(item::class);}
 }

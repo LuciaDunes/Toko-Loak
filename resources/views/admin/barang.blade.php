@@ -53,7 +53,7 @@
                                         <th>{{ $item->price }}</th>
                                         <th>{{ $item->stock }}</th>
                                         <th>{{ $item->sold }}</th>
-                                        <th><a href="{{ route('add') }}" class="btn btn-warning ">Edit</a>
+                                        <th ><a href="{{ route('edit', ['data' => $item]) }}" class="btn btn-warning ">Edit</a>
                                             <a href="{{ route('add') }}" class="btn btn-danger ">Delete</a></th>
                                 </tr>
                                 @endforeach

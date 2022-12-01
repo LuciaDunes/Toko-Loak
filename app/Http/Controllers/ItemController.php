@@ -35,10 +35,11 @@ class ItemController extends Controller
     public function store(Request $request) {
         $data = [
             'name' => $request->name,
+            'category' => $request->category,
             'image' => $request->image,
             'price' => $request->price,
             'stock' => $request->stock,
-            0 => $request->sold
+            'sold' => $request->sold,
         ];
 
         Item::create($data);
@@ -72,7 +73,7 @@ class ItemController extends Controller
 
     public function edit($id){
         $data=Item::find($id);
-        return view ('terminal/edit_terminal',compact('data'),["title"=>"Edit Data Barang"]);
+        return view ('admin.edit',compact('data'));
     }
     public function proses_edit(Request $request,$id){
         $data = Item::find($id);

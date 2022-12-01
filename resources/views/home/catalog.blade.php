@@ -45,7 +45,7 @@
                                     <ul class="w-100 list-unstyled d-flex justify-content-between mb-0">
                                         <li>{{ $item->category }}</li>
                                     </ul>
-                                    <p class="text-center mb-0 mt-2">Rp {{ $item->price }}</p>
+                                    <p class="text-center mb-0 mt-2">Rp {{ number_format($item->price) }}</p>
                                 </div>
                             </div>
                         </div>

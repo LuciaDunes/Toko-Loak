@@ -38,11 +38,11 @@
                         </tr>
                     </thead>
                     <tbody>
+                        @foreach ($datas as $item)
                         <tr>
-                            @foreach ($datas as $item)
                                 <th>{{ $no++ }}</th>
-                                <th>{{ $item->user_id }}</th>
-                                <th>{{ $item->item_id }}</th>
+                                <th>{{ $item->user->name }}</th>
+                                <th>{{ $item->item->name }}</th>
                                 <th>{{ $item->date }}</th>
                         </tr>
                         @endforeach

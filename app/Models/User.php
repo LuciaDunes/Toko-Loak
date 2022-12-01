@@ -39,8 +39,6 @@ class User extends Authenticatable
      *
      * @var array<string, string>
      */
-    protected $guarded = [
-        'id',
-    ];
+    protected $guarded = 'id';
     
 }
