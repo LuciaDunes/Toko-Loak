@@ -47,7 +47,7 @@
                                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod temp incididunt
                                      ut labore et dolore magna aliqua. Quis ipsum suspendisse. Donec condimentum elementum
                                      convallis. Nunc sed orci a diam ultrices aliquet interdum quis nulla.</p>
-                                 <form action="" method="POST">
+                                 <form action={{route()}} method="POST">
                                      <input type="hidden" name="id_barang" value="{{$datas->id}}">
                                      <div class="row">
                                          <div class="col-auto">
@@ -64,8 +64,8 @@
                                      </div>
                                      <div class="row pb-3">
                                          <div class="col ">
-                                             <button type="submit" class="btn btn-success btn-lg" name="rent"
-                                                 value="rent">Beli  </button>
+                                             <button type="submit" class="btn btn-success btn-lg" 
+                                                 value="submit">Beli  </button>
                                          </div>
                                      </div>
                                  </form>

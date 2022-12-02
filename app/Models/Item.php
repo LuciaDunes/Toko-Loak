@@ -17,6 +17,7 @@ class Item extends Model
         'price',
         'stock',
         'sold',
+        'softdelete',
     ];
     protected $guarded = [
         'id',

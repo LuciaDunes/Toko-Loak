@@ -22,6 +22,7 @@ return new class extends Migration
             $table->integer('price');
             $table->integer('stock');
             $table->integer('sold');
+            $table->boolean('softdelete')->default(0);
             $table->timestamps();
         });
     }

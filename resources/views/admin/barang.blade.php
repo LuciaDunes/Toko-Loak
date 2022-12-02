@@ -48,7 +48,7 @@
                                     @foreach ($datas as $item)
                                         <th>{{ $no++ }}</th>
                                         <th>{{ $item->name }}</th>
-                                        <th><a href="{{ $item->image }}">{{ $item->image }}</a></th>
+                                        <th><img src="{{ asset('/storage/'.$item->image) }}" style="width: 100px"></th>
                                         <th>{{ $item->category }}</th>
                                         <th>Rp {{ number_format($item->price) }}</th>
                                         <th>{{ $item->stock }}</th>
