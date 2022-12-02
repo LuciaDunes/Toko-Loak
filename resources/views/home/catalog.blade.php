@@ -30,7 +30,7 @@
                         <div class="col-md-4">
                             <div class="card mb-4 product-wap rounded-5">
                                 <div class="card rounded-5">
-                                    <img class="card-img rounded-0 img-fluid" src="{{ asset('/storage/'.$item->image) }}">
+                                    <img class="card-img rounded-0 img-fluid" src="{{asset('/storage/'.$item->image)}}">
                                     <div
                                         class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
                                         <ul class="list-unstyled">
@@ -45,7 +45,7 @@
                                     <ul class="w-100 list-unstyled d-flex justify-content-between mb-0">
                                         <li>{{ $item->category }}</li>
                                     </ul>
-                                    <p class="text-center mb-0 mt-2">Rp {{ number_format($item->price) }}</p>
+                                    <p class="text-center mb-0 mt-2">IDR {{ number_format($item->price) }}</p>
                                 </div>
                             </div>
                         </div>

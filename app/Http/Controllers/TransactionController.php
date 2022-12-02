@@ -19,7 +19,7 @@ class TransactionController extends Controller
             'user_id' => auth()->id(),
             'item_id' => $request->item_id,
             'total' => $request->total,
-            'date' => date('now')
+            'date' => now()
         ];
 
         Transaction::create($data);
