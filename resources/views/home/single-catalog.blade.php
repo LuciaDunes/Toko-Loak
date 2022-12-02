@@ -33,7 +33,7 @@
                          <div class="card">
                              <div class="card-body">
                                  <h1 class="h2">{{ $datas->name }}</h1>
-                                 <p class="h3 py-2">Rp {{ $datas->price }}</p>
+                                 <p class="h3 py-2">IDR. {{ number_format($datas->price) }}</p>
                                  <ul class="list-inline">
                                      <li class="list-inline-item">
                                          <h6>terjual {{$datas->sold}} pcs</h6>
