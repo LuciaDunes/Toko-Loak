@@ -35,3 +35,4 @@ Auth::routes();
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::get('/single/{data}', [HomeController::class, 'single'])->name('single');
+Route::post('/trans', [TransactionController::class, 'store'])->name('trans');

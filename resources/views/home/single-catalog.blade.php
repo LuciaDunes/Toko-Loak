@@ -47,8 +47,9 @@
                                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod temp incididunt
                                      ut labore et dolore magna aliqua. Quis ipsum suspendisse. Donec condimentum elementum
                                      convallis. Nunc sed orci a diam ultrices aliquet interdum quis nulla.</p>
-                                 <form action={{route()}} method="POST">
-                                     <input type="hidden" name="id_barang" value="{{$datas->id}}">
+                                 <form action={{route('trans')}} method="POST">
+                                    @csrf
+                                     <input type="hidden" name="item_id" value="{{$datas->id}}">
                                      <div class="row">
                                          <div class="col-auto">
                                              <ul class="list-inline pb-3">

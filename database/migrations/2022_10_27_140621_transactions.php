@@ -19,6 +19,7 @@ return new class extends Migration
             $table->id();
             $table->foreignId('user_id')->constrained('users');
             $table->foreignId('item_id')->constrained('items');
+            $table->integer('total');
             $table->date('date');
             $table->timestamps(); 
         });
