@@ -48,11 +48,11 @@
     <div class="row">
       <div class="col-12 col-md-4 p-5 mt-3">
         <a href="Catalog.php?kategori=kamera"><img src="{{asset("storage/LOA.png")}}" class="rounded-circle img-fluid border"></a>
-        <h2 class="text-center mt-3 mb-3">Camera</h2>
+        <h2 class="text-center mt-3 mb-3">Furnitures</h2>
       </div>
       <div class="col-12 col-md-4 p-5 mt-3">
         <a href="Catalog.php?kategori=lensa"><img src="{{asset("storage/LOA.png")}}" class="rounded-circle img-fluid border"></a>
-        <h2 class="text-center mt-3 mb-3">Lens</h2>
+        <h2 class="text-center mt-3 mb-3">Cooking Utensils</h2>
       </div>
       <div class="col-12 col-md-4 p-5 mt-3">
         <a href="Catalog.php?kategori=aksessoris"><img src="{{asset("storage/LOA.png")}}" class="rounded-circle img-fluid border"></a>

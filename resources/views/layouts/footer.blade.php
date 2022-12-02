@@ -15,7 +15,7 @@
                         </li>
                         <li>
                             <i class="fa fa-envelope fa-fw"></i>
-                            <a class="text-decoration-none" href="mailto:info@company.com">info@rentcam.com</a>
+                            <a class="text-decoration-none" href="mailto:info@company.com">info@LoakStore.com</a>
                         </li>
                     </ul>
                 </div>
@@ -23,11 +23,10 @@
                 <div class="col-md-4 pt-5">
                     <h2 class="h2 text-light border-bottom pb-3 border-light">Produk</h2>
                     <ul class="list-unstyled text-light footer-link-list">
-                        <li><a class="text-decoration-none" href="#">Canon</a></li>
-                        <li><a class="text-decoration-none" href="#">Nikon</a></li>
-                        <li><a class="text-decoration-none" href="#">Sony</a></li>
-                        <li><a class="text-decoration-none" href="#">Fuji</a></li>
+                        <li><a class="text-decoration-none" href="#">Furnitures</a></li>
+                        <li><a class="text-decoration-none" href="#">Cooking Utensils</a></li>
                         <li><a class="text-decoration-none" href="#">Accessories</a></li>
+                        <li><a class="text-decoration-none" href="#">Other</a></li>
                     </ul>
                 </div>
 
