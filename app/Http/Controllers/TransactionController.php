@@ -15,10 +15,11 @@ class TransactionController extends Controller
         return view('admin.transaction', ['datas' => $data, 'no' => $no]);
     }
     public function store(Request $request) {
+        dd($request);
         $data = [
             'user_id' => auth()->id(),
-            'barang_id' => $request->price,
-            'date' => $request->price
+            'item_id' => $request->id,
+            'date' => date('now')
         ];
 
         Transaction::create($data);
