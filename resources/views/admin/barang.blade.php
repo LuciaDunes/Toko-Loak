@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.app-admin')
 
 @section('content')
             <main role="main" class=" pt-3 px-4">
@@ -12,7 +12,7 @@
                             </div>
                         @endif
 
-                        <a href="{{ route('add') }}" class="btn btn-primary mx-5">(+) Tambah</a>
+                        <a href="{{ route('add') }}" class="btn btn-primary mx-5">Tambah</a>
                         <table class="table table-hover mt-3" border="1" cellpadding='10'>
                             <thead>
                                 <tr>

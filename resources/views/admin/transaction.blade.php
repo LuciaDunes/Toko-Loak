@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.app-admin')
 
 @section('content')
     <main role="main" class=" pt-3 px-4">

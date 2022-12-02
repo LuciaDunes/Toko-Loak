@@ -15,7 +15,8 @@ class Transaction extends Model
         'total',
         'date',
     ];
-    protected $primaryKey = 'id';
+    protected $guarded = 'id';
+    protected $dates  = ['date'];
     
     public function user(){
         return $this->belongsTo(User::class);

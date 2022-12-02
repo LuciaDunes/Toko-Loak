@@ -22,14 +22,16 @@ use App\Http\Controllers\HomeController;
 Route::get('/', [ItemController::class, 'landingPage'])->name('landingPage');
 Route::get('/catalog', [ItemController::class, 'catalog'])->name('catalog');
 
-Route::get('/barang', [ItemController::class, 'showItems'])->name('showItems');
-Route::get('/tambah', [ItemController::class, 'add'])->name('add');
-Route::post('/simpan', [ItemController::class, 'store'])->name('store');
-Route::get('/edit/{data}', [ItemController::class, 'edit'])->name('edit');
-Route::post('/update', [ItemController::class, 'update'])->name('update');
-Route::get('/Transaction', [TransactionController::class, 'showTransaction'])->name('showTransaction');
-Route::post('/delete/{data}',[ItemController::class, 'delete'])->name('delete');
-
+Route::middleware('auth', 'checkRole:penjual')->group(function () {
+    Route::get('/barang', [ItemController::class, 'showItems'])->name('showItems');
+    Route::get('/tambah', [ItemController::class, 'add'])->name('add');
+    Route::post('/simpan', [ItemController::class, 'store'])->name('store');
+    Route::get('/edit/{data}', [ItemController::class, 'edit'])->name('edit');
+    Route::post('/update', [ItemController::class, 'update'])->name('update');
+    Route::get('/Transaction', [TransactionController::class, 'showTransaction'])->name('showTransaction');
+    Route::get('/chart', [TransactionController::class, 'chart'])->name('chart');
+    Route::post('/delete/{data}',[ItemController::class, 'delete'])->name('delete');
+});
 
 Auth::routes();
 
